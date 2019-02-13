@@ -4,17 +4,17 @@ Marketo code challenge
 
 ## Getting Started
 
-Clone repositiry
+This code requires NodeJS. After pulling the code, use a terminal to access the folder and type
 
-### Installing
+### Running
 
-A step by step series of examples that tell you how to get a development env running
+This is a command-line JavaScript application. With a terminal pointed to the folder, run the application with:
 
-Say what the step will be
+node app.js
 
 ## Built With
 
-* [NODEjs](https://nodejs.org/en/) 
+* [NODE.js](https://nodejs.org/en/) 
 
 ## Authors
 
