@@ -14,7 +14,7 @@ This is a command-line JavaScript application. With a terminal pointed to the fo
 
 > node app.js
 
-## Check Results
+## Check Result
 
 >  Valid Users:  output/valid_leads.json
 
