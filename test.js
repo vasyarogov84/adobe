@@ -26,5 +26,5 @@ sortData.map(sd => {
   return sd;
 });
 
-console.log(sortData);
-//fs.writeFileSync("./outputs/filter.js", JSON.stringify(data, null, 2) , 'utf-8');
+
+fs.writeFileSync("./output/filter.js", JSON.stringify(sortData, null, 2) , 'utf-8');
