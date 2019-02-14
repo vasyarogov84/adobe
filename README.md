@@ -4,9 +4,7 @@ Adobe code challenge
 
 ## Getting Started
 
-This code requires NodeJS. After pulling the code, use a terminal to access the folder and type:
-
-> npm install
+This code requires NodeJS. 
 
 ### Running
 
