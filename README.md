@@ -1,6 +1,6 @@
 # Project Title
 
-Marketo code challenge
+Adobe code challenge
 
 ## Getting Started
 
