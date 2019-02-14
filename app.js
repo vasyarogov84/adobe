@@ -19,7 +19,11 @@ let sortData = data.leads
 function findIndex(value) {
   let allIndexVal = sortData.map(obj => obj.index);
   let i = allIndexVal.indexOf(value);
-  return i;
+
+  if (i >= 0) {
+    return i;
+  }
+  return false;
 }
 
 sortData
@@ -27,17 +31,14 @@ sortData
     dataWithIndex.map(indexed_user => {
       let { _id, email, index } = indexed_user;
 
-      if (user.email === email && user.index !== index) {
+      if (
+        ((user.email === email && user.index !== index) ||
+          (user._id === _id && user.index !== index)) &&
+        findIndex(index)
+      ) {
         const userIndexToDelete = findIndex(index);
-        const reason = "EMAIL DUPLICATION";
-        const loggerData = loggerCreation(user, indexed_user, reason);
-        fs.appendFile("./logs/duplicate_users.txt", loggerData, err => {
-          if (err) throw err;
-        });
-        sortData.splice(userIndexToDelete, 1);
-      } else if (user._id === _id && user.index !== index) {
-        const userIndexToDelete = findIndex(index);
-        const reason = "ID DUPLICATION";
+        const reason =
+          user._id === _id ? "ID DUPLICATION" : "EMAIL DUPLICATION";
         const loggerData = loggerCreation(user, indexed_user, reason);
         fs.appendFile("./logs/duplicate_users.txt", loggerData, err => {
           if (err) throw err;
